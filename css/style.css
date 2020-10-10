@@ -1,0 +1,291 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/*==================================
+Variables
+===================================*/
+
+:root {
+    --fuentePrimaria: 'Balsamiq Sans', cursive;
+    --fuenteSegundaria: 'Noto Sans HK', sans-serif;
+    --fuenteT: 'Shadows Into Light', cursive;
+}
+
+
+/*==================================
+Globales
+===================================*/
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuentePrimaria);
+}
+
+p {
+    font-family: var(--fuenteSegundaria);
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 90%;
+}
+
+
+/*==================================
+Header
+===================================*/
+
+.header {
+    text-align: center;
+    padding: 1rem .5rem;
+    color: WHITE;
+}
+
+@media(min-width: 544px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 1rem;
+        align-items: center;
+    }
+}
+
+.info h1 {
+    padding-top: 2rem;
+    color:#392616;
+}
+
+.info p,
+.footer p {
+    font-size: 20px;
+    color: rgb(75, 61, 61);
+}
+
+.header h1 {
+    margin-top: 0;
+}
+
+.fondo {
+    background-color: rgb(255, 248, 230);
+    border-bottom: 5px solid #E6641B;
+}
+
+.fondo:nth-child(3){
+
+    border-top: 5px solid #E6641B;
+
+
+}
+
+
+/*==================================
+Main
+===================================*/
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #E6641B;
+    padding-top: 1rem;
+}
+
+.promocion {
+    margin: 0 auto;
+    border: 3px solid rgb(75, 61, 61);
+    background: rgb(255, 248, 230);
+    border-radius: 10px;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 .5rem;
+    color: rgb(75, 61, 61);
+}
+
+.descuento {
+    font-size: 2rem;
+    color: GREEN;
+}
+
+.descuento p strong {
+    font-size: 4rem;
+    margin: 0 10px;
+}
+
+@media(min-width: 768px) {
+    .promocion {
+        flex-direction: row;
+        padding: 1rem 2rem;
+        justify-content: center;
+        height: 200px;
+    }
+    .infoPromo,
+    .descuento {
+        padding: 0 2rem;
+    }
+    .descuento {
+        font-size: 2rem;
+        color: GREEN;
+    }
+    .descuento p strong {
+        font-size: 4rem;
+        margin: 0 10px;
+    }
+}
+
+.imagenes {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.imagenes img {
+    padding: .5rem 0;
+}
+
+
+/*==================================
+Footer
+===================================*/
+
+footer p,
+.copy {
+    text-align: center;
+    color: rgb(75, 61, 61);
+    font-size: var(--fuenteSegundaria);
+    font-size: 20px;
+}
+
+footer p {
+    padding-top: 2rem;
+}
+
+.copy {
+    padding: 0 0 2rem 0;
+}
+
+h3 {
+    color: #E6641B;
+}
+
+.footer {
+    text-align: center;
+    color: WHITE;
+    padding: 1rem;
+}
+
+.frase strong {
+    font-size: 2rem;
+}
+
+.frase p .autor {
+    font-family: var(--fuenteT);
+}
+
+.click {
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.click p {
+    padding: 0;
+    margin: 0;
+}
+
+.horario p strong{
+
+    color: #E6641B;
+
+}
+
+@media(min-width: 544px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .frase {
+        width: 300px;
+    }
+    .horario {
+        padding-right: 8rem;
+    }
+    .info {
+        padding-left: 8rem;
+    }
+}
+
+.footer i {
+    font-size: 2rem;
+}
+
+.face {
+    color: blue;
+    padding-right: .5rem;
+}
+
+.insta {
+    color: #fd5949;
+    padding-left: .5rem;
+}
+
+.info p i{
+
+    color: #E6641B;
+
+}
+
+
+/*==================================
+Modal
+===================================*/
+
+.modal-container {
+    display: inline-block;
+    position: flex;
+}
+
+.modal-container.active {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+.modal-container img {
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.modal-container.active::after {
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.80);
+    z-index: 0;
+}
